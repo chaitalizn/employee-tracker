@@ -8,7 +8,21 @@ class DB{
 
     createEmployee() {
         return this.connection.query(
-            'INSERT into employee SET ?', (employee)
+            'INSERT INTO employee SET ?', (employee)
         );
     }
+
+    createRole() {
+        return this.connection.query(
+            'INSERT INTO roles SET ?', (role)
+        );
+    };
+
+    createDepartment() {
+        return this.connection.query(
+            'INSERT INTO department SET ?', (department)
+        );
+    };
 };
+
+module.exports = DB;
